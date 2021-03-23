@@ -1,0 +1,293 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat ="server" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cable Television Uplifter</title>
+<meta name="keywords" content="purple ray, theme, free templates, website templates, CSS, HTML" />
+<meta name="description" content="Purple Ray is a free CSS template provided by templatemo.com" />
+<link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+
+<script language="javascript" type="text/javascript">
+    function clearText(field) {
+        if (field.defaultValue == field.value) field.value = '';
+        else if (field.value == '') field.value = field.defaultValue;
+    }
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+    /***********************************************
+    * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+    * This notice MUST stay intact for legal use
+    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+    ***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+    ddsmoothmenu.init({
+        mainmenuid: "templatemo_menu", //menu DIV id
+        orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+        classname: 'ddsmoothmenu', //class added to menu's outer DIV
+        //customtheme: ["#1c5a80", "#18374a"],
+        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    })
+
+</script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat ="server" >
+<div id="templatemo_wrapper">
+	<div id="templatemo_top">
+   		<div id="templatemo_search">
+        </div>
+    </div> <!-- end of top -->
+    
+    <div id="templatemo_header">
+    	<div id="site_title"><h1 style ="font-size :xx-large ;  padding-left :250px;" >Cable Television Uplifter</h1></div>
+        <div id="templatemo_menu" class="ddsmoothmenu">
+            <ul>
+                       
+                <li><a href="HomePage.aspx"  class="selected">Homepage</a></li>
+                 <li><a href="AdminLogin.aspx"  >AdminLogin</a></li>
+                 <li><a href="UserLogin.aspx" >UserLogin</a></li>
+                   <li><a href="EmployeeLogin.aspx"  >EmpLogin</a></li>
+				
+            </ul>
+            <br style="clear: left" />
+
+           
+      
+
+           
+        </div> <!-- end of menu -->
+         
+    </div> <!-- end of header -->
+     
+    
+    
+    <div id="templatemo_middle">
+    
+    	<div id="slider-wrapper1">
+        
+            <div id="slider1" class="nivoSlider">
+                <a href="http://www.templatemo.com" title="CSS Templates"><img src="images/slider/04.jpg" alt="Slider 01" /></a>
+                <a href="http://www.flashmo.com" title="Flash Templates"><img src="images/slider/03.jpg" alt="Slider 02"  /></a>
+                <a href="http://www.templatemo.com/page/1" title="Free Templates"><img src="images/slider/02.jpg" alt="Slider 03" /></a>
+                <a href="http://www.flashmo.com/page/1" title="XML Image Gallery"><img src="images/slider/01.jpg" alt="Slider 04" /></a>
+            </div>
+        
+        </div>
+        
+        <div id="slider-wrapper"  >
+        
+            <div id="slider" class="nivoSlider">
+                <a href="http://www.templatemo.com" title="CSS Templates"><img src="images/slider/01.jpg" alt="Slider 01" /></a>
+                <a href="http://www.flashmo.com" title="Flash Templates"><img src="images/slider/02.jpg" alt="Slider 02"  /></a>
+                <a href="http://www.templatemo.com/page/1" title="Free Templates"><img src="images/slider/03.jpg" alt="Slider 03" /></a>
+                <a href="http://www.flashmo.com/page/1" title="XML Image Gallery"><img src="images/slider/04.jpg" alt="Slider 04" /></a>
+            </div>
+        
+        </div>
+            <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+            <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $('#slider').nivoSlider();
+                });
+            </script>
+
+              <script type="text/javascript">
+                  $(window).load(function () {
+                      $('#slider1').nivoSlider();
+                  });
+            </script>
+
+            <div width="100%" >
+     <table width ="100%" >
+     <tr>
+     <td>
+         <asp:Menu ID="Menu1" runat="server" Font-Size="Medium" Orientation="Horizontal" 
+             StaticEnableDefaultPopOutImage="False" Font-Bold="True" Visible="False">
+             <DynamicHoverStyle ForeColor="Yellow" />
+             <DynamicMenuItemStyle HorizontalPadding="90px" VerticalPadding="5px" />
+             <Items>
+                 <asp:MenuItem Text="Homepage" Value="Homepage" NavigateUrl="~/HomePage.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Admin Login" Value="Admin Login" 
+                     NavigateUrl="~/AdminLogin.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Employee Login" Value="Employee Login" 
+                     NavigateUrl="~/EmployeeLogin.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem NavigateUrl="~/UserLogin.aspx" Text="User Login" 
+                     Value="User Login"></asp:MenuItem>
+             </Items>
+             <StaticHoverStyle ForeColor="#FFFF66" />
+             <StaticMenuItemStyle HorizontalPadding="50px"  />
+         </asp:Menu>
+         </td>
+     
+     </tr>
+     <tr>
+     <td>
+         <asp:Menu ID="Menu2" runat="server" Font-Size="Medium" Orientation="Horizontal" 
+             StaticEnableDefaultPopOutImage="False" Font-Bold="True" Visible="False">
+             <DynamicHoverStyle ForeColor="Yellow" />
+             <DynamicMenuItemStyle HorizontalPadding="25px" VerticalPadding="5px" />
+             <Items>
+                 <asp:MenuItem Text="Employee" Value="Employee">
+                     <asp:MenuItem NavigateUrl="~/InsertEmployeeDetails.aspx" 
+                         Text="Insert New Employee" Value="Insert New Employee"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/ModifyEmployeeDetails.aspx" 
+                         Text="Modify Employee Details" Value="Modify Employee Details">
+                     </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/ViewEmployeeDetails.aspx" Text="View Employee" 
+                         Value="View Employee"></asp:MenuItem>
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Special Activities" Value="Special Activities">
+                     <asp:MenuItem NavigateUrl="~/InsertSpecialActivies.aspx" 
+                         Text="Insert Special Activities" Value="Insert Special Activities">
+                     </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/AdminViewSpecialActivity.aspx" 
+                         Text="View Special Activities" Value="View Special Activities">
+                     </asp:MenuItem>
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Connection Request" Value="Connection Request" 
+                     NavigateUrl="~/AdminViewConnectionRequestDetails.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem NavigateUrl="~/AdminSendAlertMessage.aspx" Text="Alert Message" 
+                     Value="Alert Message"></asp:MenuItem>
+                 <asp:MenuItem Text="Reports" Value="Reports">
+                     <asp:MenuItem NavigateUrl="~/AdminViewComplaintDetails.aspx" 
+                         Text="View Complaint Details" Value="View Complaint Details"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/AdminViewEmployeeWorkingDetails.aspx" 
+                         Text="Employee Working Details" Value="Employee Working Details">
+                     </asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/AdminViewBillPaymentDetails.aspx" 
+                         Text="Bill Payment Details" Value="Bill Payment Details"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/AdminViewNotBillPaymentCustomerDetails.aspx" 
+                         Text="View Bill Not Payment Customer Details" 
+                         Value="View Bill Not Payment Customer Details"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/ViewCustomerDetails.aspx" Text="Customer Details" 
+                         Value="Customer Details"></asp:MenuItem>
+                 </asp:MenuItem>
+                 <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Logout" Value="Logout">
+                 </asp:MenuItem>
+             </Items>
+             <StaticHoverStyle ForeColor="#FFFF66" />
+             <StaticMenuItemStyle HorizontalPadding="25px"  />
+         </asp:Menu>
+         </td>
+     </tr>
+
+     <tr>
+     <td>
+         <asp:Menu ID="Menu3" runat="server" Font-Size="Medium" Orientation="Horizontal" 
+             StaticEnableDefaultPopOutImage="False" Font-Bold="True" Visible="False">
+             <DynamicHoverStyle ForeColor="Yellow" />
+             <DynamicMenuItemStyle HorizontalPadding="30px" VerticalPadding="5px" />
+             <Items>
+                 <asp:MenuItem Text="View Account" Value="View Account" 
+                     NavigateUrl="~/EmployeeViewDetails.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Connection Details" Value="Connection Details" 
+                     NavigateUrl="~/EmployeeViewNewConnectionDetails.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Complaint Details" Value="Complaint Details" 
+                     NavigateUrl="~/EmployeeViewComplaintDetails.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem NavigateUrl="~/EmployeeWorkingDetails.aspx" Text="Working Details" 
+                     Value="Working Details"></asp:MenuItem>
+                 <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Logout" Value="Logout">
+                 </asp:MenuItem>
+             </Items>
+             <StaticHoverStyle ForeColor="#FFFF66" />
+             <StaticMenuItemStyle HorizontalPadding="30px"  />
+         </asp:Menu>
+         </td>
+     </tr>
+     <tr>
+     <td>
+         <asp:Menu ID="Menu4" runat="server" Font-Size="Medium" Orientation="Horizontal" 
+             StaticEnableDefaultPopOutImage="False" Font-Bold="True" Visible="False">
+             <DynamicHoverStyle ForeColor="Yellow" />
+             <DynamicMenuItemStyle HorizontalPadding="35px" VerticalPadding="5px" />
+             <Items>
+                 <asp:MenuItem Text="Account" Value=" Account" 
+                     NavigateUrl="~/UserViewCustomerDetails.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Connection Request" Value="Connection Request" 
+                     NavigateUrl="~/NewConnectionRequest.aspx">
+                 </asp:MenuItem>
+                 <asp:MenuItem Text="Complaint" Value="Complaint">
+                     <asp:MenuItem NavigateUrl="~/InsertComplaint.aspx" Text="Insert Complaint" 
+                         Value="Insert Complaint"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/UserViewComplaintStatus.aspx" 
+                         Text="Complaint Status" Value="Complaint Status"></asp:MenuItem>
+                 </asp:MenuItem>
+                 <asp:MenuItem NavigateUrl="~/BillPayment.aspx" Text="Bill Payment" 
+                     Value="Bill Payment"></asp:MenuItem>
+                 <asp:MenuItem Text="Reports" Value="Reports">
+                     <asp:MenuItem NavigateUrl="~/UserViewMessage.aspx" Text="View Message" 
+                         Value="View Message"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/UserViewSpecialActivies.aspx" 
+                         Text="Special Activities" Value="Special Activities"></asp:MenuItem>
+                 </asp:MenuItem>
+                 <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Logout" Value="Logout">
+                 </asp:MenuItem>
+             </Items>
+             <StaticHoverStyle ForeColor="#FFFF66" />
+             <StaticMenuItemStyle HorizontalPadding="35px"  />
+         </asp:Menu>
+         </td>
+     </tr>
+     
+     </table>
+     <br /><br /><br /><br />
+     </div>
+            
+            <div class="cleaner">
+
+<div id="templatemo_main_wrapper"> <span class="top"></span><span class="bottom"></span>
+<div id="templatemo_main">
+    	
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div> 
+</div>
+
+
+    
+  
+        </div>
+    </div> <!-- end of middle -->
+    
+    <!-- end of main wrapper -->
+    
+    
+    
+</div> <!-- end of wrapper -->
+
+
+    <div id="templatemo_cr_bar_wrapper">
+	<div id="templatemo_cr_bar">
+    
+    </div>
+</div>
+  
+    </form>
+</body>
+</html>
